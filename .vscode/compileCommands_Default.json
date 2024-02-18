@@ -1,0 +1,42 @@
+[
+	{
+		"file": "C:\\Users\\User\\Documents\\Unreal Projects\\CStringGame\\Source\\CStringGame\\CStringGame.Build.cs",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\User\\Documents\\Unreal Projects\\CStringGame\\.vscode\\compileCommands_Default\\CStringGame.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\User\\Documents\\Unreal Projects\\CStringGame\\Source\\CStringGame\\CStringGame.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\User\\Documents\\Unreal Projects\\CStringGame\\.vscode\\compileCommands_Default\\CStringGame.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\User\\Documents\\Unreal Projects\\CStringGame\\Source\\CStringGame\\CStringGame.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\User\\Documents\\Unreal Projects\\CStringGame\\.vscode\\compileCommands_Default\\CStringGame.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\User\\Documents\\Unreal Projects\\CStringGame\\Source\\CStringGame\\Face.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\User\\Documents\\Unreal Projects\\CStringGame\\.vscode\\compileCommands_Default\\CStringGame.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\User\\Documents\\Unreal Projects\\CStringGame\\Source\\CStringGame\\Face.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\User\\Documents\\Unreal Projects\\CStringGame\\.vscode\\compileCommands_Default\\CStringGame.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	}
+]
