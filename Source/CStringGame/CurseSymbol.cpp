@@ -5,7 +5,12 @@
 
 // Sets default values
 ACurseSymbol::ACurseSymbol()
+	:
+	rng(rd()),
+	indexPicker(0,6)
 {
+	pickedSymbol = symbols[indexPicker(rng)];
+	UE_LOG(LogTemp, Display, TEXT("Chosen symbol for this isntance is: %c ") , pickedSymbol);
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
@@ -31,4 +36,7 @@ void ACurseSymbol::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 }
-
+// char ACurseSymbol::GetPickedSymbol() const
+// {
+// 	return pickedSymbol;
+// }
