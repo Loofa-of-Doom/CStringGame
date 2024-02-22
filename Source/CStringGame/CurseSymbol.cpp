@@ -36,7 +36,7 @@ void ACurseSymbol::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 }
-// char ACurseSymbol::GetPickedSymbol() const
-// {
-// 	return pickedSymbol;
-// }
+int32 ACurseSymbol::GetPickedSymbol() const
+{
+	return pickedSymbol;
+}

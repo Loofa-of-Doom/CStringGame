@@ -34,8 +34,8 @@ public:
 
 	//Getters and Setters
 
-	// UFUNCTION(BlueprintCallable)
-	// char GetPickedSymbol() const;
+	 UFUNCTION(BlueprintCallable)
+	 int32 GetPickedSymbol() const;
 
 	void SetSymbol(char symbol);
 	bool GetIsEaten() const;
@@ -43,8 +43,8 @@ public:
 
 private:
 	UPROPERTY(VisibleAnywhere, Category="Symbol Type");
-	uint16 pickedSymbol;
-	uint16 symbols[6] = {'!', '#', '&', '/','$','?'};
+	int32 pickedSymbol;
+	int32 symbols[6] = {'!', '#', '&', '/','$','?'};
 	bool isEaten = false;
 	std::random_device rd;
 	std::mt19937 rng;
