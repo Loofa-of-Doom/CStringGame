@@ -30,6 +30,8 @@ public:
 	UPROPERTY(VisibleAnywhere, Category="My Physics");
 	FVector velocity = FVector(0,0,100);
 
+	
+
 	//Member Functions
 
 	//Getters and Setters
@@ -51,3 +53,14 @@ private:
 	std::uniform_int_distribution<int> indexPicker;
 	
 };
+UENUM(BlueprintType)
+enum CurseNames
+	{
+		Defualt = 0,
+		ExclamationPoint = 33,
+		Pound = 35,
+		Ampersand = 38,
+		Slash = 47,
+		MoneySign = 36,
+		Questionmark = 63
+	};
