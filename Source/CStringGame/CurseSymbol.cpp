@@ -11,6 +11,7 @@ ACurseSymbol::ACurseSymbol()
 {
 	pickedSymbol = symbols[indexPicker(rng)];
 	UE_LOG(LogTemp, Display, TEXT("Chosen symbol for this isntance is: %c ") , pickedSymbol);
+
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
@@ -27,7 +28,10 @@ void ACurseSymbol::BeginPlay()
 void ACurseSymbol::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	if(isEaten)
+	{
+		ACurseSymbol();
+	}
 }
 
 // Called to bind functionality to input
@@ -39,4 +43,8 @@ void ACurseSymbol::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 int32 ACurseSymbol::GetPickedSymbol() const
 {
 	return pickedSymbol;
+}
+void ACurseSymbol::SetIsEaten(bool truefal)
+{
+	isEaten = truefal;
 }

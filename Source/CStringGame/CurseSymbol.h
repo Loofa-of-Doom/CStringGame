@@ -39,15 +39,24 @@ public:
 	 UFUNCTION(BlueprintCallable)
 	 int32 GetPickedSymbol() const;
 
+	UFUNCTION(BlueprintCallable)
+	void SetIsEaten(bool truefal);
+
 	void SetSymbol(char symbol);
 	bool GetIsEaten() const;
-	void SetIsEaten();
+
+
 
 private:
 	UPROPERTY(VisibleAnywhere, Category="Symbol Type");
 	int32 pickedSymbol;
+
 	int32 symbols[6] = {'!', '#', '&', '/','$','?'};
+
+	UPROPERTY(VisibleAnywhere, Category ="Symbol Type");
 	bool isEaten = false;
+
+	
 	std::random_device rd;
 	std::mt19937 rng;
 	std::uniform_int_distribution<int> indexPicker;
