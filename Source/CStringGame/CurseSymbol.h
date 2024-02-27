@@ -42,6 +42,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void SetIsEaten(bool truefal);
 
+	UFUNCTION(BlueprintCallable)
+	FVector GetStartLocation();
+
 	void SetSymbol(char symbol);
 	bool GetIsEaten() const;
 
@@ -56,10 +59,13 @@ private:
 	UPROPERTY(VisibleAnywhere, Category ="Symbol Type");
 	bool isEaten = false;
 
-	
+	int xAxisLoc;
+	FVector startLoc;
 	std::random_device rd;
 	std::mt19937 rng;
 	std::uniform_int_distribution<int> indexPicker;
+	std::uniform_int_distribution<int> xAxisPicker;
+
 	
 };
 UENUM(BlueprintType)
