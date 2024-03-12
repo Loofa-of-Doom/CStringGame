@@ -26,10 +26,13 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	void PrintCString( char* p);
-
+	
+	 UFUNCTION(BlueprintCallable)
+	 int32 GetSelectedSymbol() const;
 private:
 	char symbols[6] = {'!', '#', '&', '/','$','?'};
 	static constexpr int wordLength= 5;
+	char selectedSymbol;
 	char word[wordLength] = {1,1,1,1,0};
 	std::random_device rd;
 	std::mt19937 rng;
