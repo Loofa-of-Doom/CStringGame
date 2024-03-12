@@ -25,11 +25,12 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	void PrintCString( char* p);
 
 private:
-	TCHAR symbols[6] = {'!', '#', '&', '/','$','?'};
+	char symbols[6] = {'!', '#', '&', '/','$','?'};
 	static constexpr int wordLength= 5;
-	TCHAR word[wordLength] = {1,1,1,1,0};
+	char word[wordLength] = {1,1,1,1,0};
 	std::random_device rd;
 	std::mt19937 rng;
 	std::uniform_int_distribution<int> indexPicker;
