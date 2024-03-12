@@ -27,13 +27,16 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	void PrintCString( char* p);
 	
+	//Once correct symbol has has been selected move and select the next symbol in CString
+	void MoveSelectedSymbol();
 	 UFUNCTION(BlueprintCallable)
 	 int32 GetSelectedSymbol() const;
+	
 private:
 	char symbols[6] = {'!', '#', '&', '/','$','?'};
 	static constexpr int wordLength= 5;
-	char selectedSymbol;
 	char word[wordLength] = {1,1,1,1,0};
+	char* selectedSymbol;
 	std::random_device rd;
 	std::mt19937 rng;
 	std::uniform_int_distribution<int> indexPicker;
