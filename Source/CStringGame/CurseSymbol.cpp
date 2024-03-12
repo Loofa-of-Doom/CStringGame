@@ -61,3 +61,8 @@ FVector ACurseSymbol::GetStartLocation()
 	// UE_LOG(LogTemp, Display, TEXT("Starting Location %f"), *castStartLocX )
 	return startLoc;
 }
+
+bool ACurseSymbol::GetIsEaten() const
+{
+	return isEaten;
+}

@@ -2,14 +2,35 @@
 
 #pragma once
 
+#include "CurseSymbol.h"
+#include <random>
 #include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
+#include "SeaString.generated.h"
 
-/**
- * 
- */
-class CSTRINGGAME_API SeaString
+UCLASS()
+class CSTRINGGAME_API ASeaString : public AActor
 {
-public:
-	SeaString();
-	~SeaString();
+	GENERATED_BODY()
+	
+public:	
+	// Sets default values for this actor's properties
+	ASeaString();
+	
+
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
+public:	
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+private:
+	// char symbols[6] = {'!', '#', '&', '/','$','?'};
+	// static constexpr int wordLength= 5;
+	// char word[wordLength];
+	// std::random_device rd;
+	// std::mt19937 rng;
+	// std::uniform_int_distribution<int> indexPicker;
 };
