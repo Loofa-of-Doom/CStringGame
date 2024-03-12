@@ -27,10 +27,10 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 private:
-	// char symbols[6] = {'!', '#', '&', '/','$','?'};
-	// static constexpr int wordLength= 5;
-	// char word[wordLength];
-	// std::random_device rd;
-	// std::mt19937 rng;
-	// std::uniform_int_distribution<int> indexPicker;
+	TCHAR symbols[6] = {'!', '#', '&', '/','$','?'};
+	static constexpr int wordLength= 5;
+	TCHAR word[wordLength] = {1,1,1,1,0};
+	std::random_device rd;
+	std::mt19937 rng;
+	std::uniform_int_distribution<int> indexPicker;
 };
