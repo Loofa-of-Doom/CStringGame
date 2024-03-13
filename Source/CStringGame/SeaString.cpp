@@ -19,7 +19,7 @@ ASeaString::ASeaString()
 		char newSymbol = symbols[indexPicker(rng)];
 		*p= newSymbol;
 	}
-	selectedSymbol = word;
+	selectedSymbol = *word;
 }
 
 // Called when the game starts or when spawned
@@ -49,9 +49,5 @@ void ASeaString::PrintCString(char* p)
 
  int32 ASeaString::GetSelectedSymbol() const
  {
-	return int32(*selectedSymbol);
- }
- void ASeaString::MoveSelectedSymbol()
- {
-	selectedSymbol++;
+	return selectedSymbol;
  }
