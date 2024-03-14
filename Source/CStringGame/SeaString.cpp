@@ -7,7 +7,7 @@
 ASeaString::ASeaString()
 	:
 	rng(rd()),
-	indexPicker(0,6)
+	indexPicker(0,5)
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -20,13 +20,17 @@ ASeaString::ASeaString()
 		*p= newSymbol;
 	}
 	selectedSymbol = word;
+	PrintSelectedSymbol();
+	
+	// UPROPERTY(VisibleAnywhere, Category="Symobl Type");
+	// int32 intSelectedSymbol = int32(*selectedSymbol);
 }
 
 // Called when the game starts or when spawned
 void ASeaString::BeginPlay()
 {
 	Super::BeginPlay();
-	PrintCString(word);
+	//PrintCString(word);
 }
 
 // Called every frame
@@ -43,7 +47,11 @@ void ASeaString::PrintCString(char* p)
 	{
 		//UE_LOG(LogTemp, Display, TEXT("Heres the string: %s"), *msg);
 		UE_LOG(LogTemp, Display, TEXT("Heres the string: %c"), *p);
-	}
+	} 
+}
+void ASeaString::PrintSelectedSymbol()
+{
+	UE_LOG(LogTemp, Display, TEXT("The selected symbol is: %c"), *selectedSymbol);
 }
 
  int32 ASeaString::GetSelectedSymbol() const
