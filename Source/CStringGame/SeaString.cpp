@@ -56,7 +56,8 @@ void ASeaString::PrintSelectedSymbol()
 
  int32 ASeaString::GetSelectedSymbol() const
  {
-	return int32(*selectedSymbol);
+	int32 intSelectedSymbol = int32(*selectedSymbol);
+	return intSelectedSymbol;
  }
 
 void ASeaString::MoveSelectedSymbol()

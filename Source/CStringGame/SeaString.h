@@ -26,13 +26,17 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	void PrintCString( char* p);
-	void PrintSelectedSymbol();
+	
 	
 	//Once correct symbol has has been selected move and select the next symbol in CString
+	UFUNCTION(BlueprintCallable)
 	void MoveSelectedSymbol();
 
-	 UFUNCTION(BlueprintCallable)
-	 int32 GetSelectedSymbol() const;
+	UFUNCTION(BlueprintCallable)
+	int32 GetSelectedSymbol() const;
+	
+	UFUNCTION(BlueprintCallable)
+	void PrintSelectedSymbol();
 	 
 private:
 	char symbols[6] = {'!', '#', '&', '/','$','?'};
