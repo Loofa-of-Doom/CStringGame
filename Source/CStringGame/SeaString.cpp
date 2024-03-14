@@ -20,6 +20,8 @@ ASeaString::ASeaString()
 		*p= newSymbol;
 	}
 	selectedSymbol = word;
+	//sets FSTring
+	fWord = word;
 	PrintSelectedSymbol();
 	
 	// UPROPERTY(VisibleAnywhere, Category="Symobl Type");
@@ -63,4 +65,8 @@ void ASeaString::PrintSelectedSymbol()
 void ASeaString::MoveSelectedSymbol()
  {
 	selectedSymbol++;
+ }
+ FString ASeaString::GetFWord()
+ {
+	return fWord;
  }

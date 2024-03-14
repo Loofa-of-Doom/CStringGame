@@ -25,9 +25,10 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	
+	// User Functions and Variables
 	void PrintCString( char* p);
-	
-	
+	FString fWord;
 	//Once correct symbol has has been selected move and select the next symbol in CString
 	UFUNCTION(BlueprintCallable)
 	void MoveSelectedSymbol();
@@ -37,6 +38,9 @@ public:
 	
 	UFUNCTION(BlueprintCallable)
 	void PrintSelectedSymbol();
+
+	UFUNCTION(BlueprintCallable)
+	FString GetFWord();
 	 
 private:
 	char symbols[6] = {'!', '#', '&', '/','$','?'};
