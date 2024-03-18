@@ -13,11 +13,18 @@ ASeaString::ASeaString()
 	PrimaryActorTick.bCanEverTick = true;
 
 	//Last char of string neds to be 0 so C-String ends
-	word[4] = 0;
+	word[wordLength + spaces] = 0;
 	for(char* p = word; *p != 0; p++)
 	{
+		char* spacer = p++;
 		char newSymbol = symbols[indexPicker(rng)];
-		*p= newSymbol;
+		*spacer = ' ';
+		if(*p != ' ')
+		{
+			*p= newSymbol;
+		}
+		
+		
 	}
 	selectedSymbol = word;
 	//sets FSTring

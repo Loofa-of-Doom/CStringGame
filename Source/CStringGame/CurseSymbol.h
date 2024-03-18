@@ -54,6 +54,7 @@ private:
 	UPROPERTY(VisibleAnywhere, Category="Symbol Type");
 	int32 pickedSymbol;
 
+	
 	int32 symbols[6] = {'!', '#', '&', '/','$','?'};
 
 	UPROPERTY(VisibleAnywhere, Category ="Symbol Type");
