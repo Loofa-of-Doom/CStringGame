@@ -65,8 +65,18 @@ void ASeaString::PrintSelectedSymbol()
 void ASeaString::MoveSelectedSymbol()
  {
 	selectedSymbol++;
+	currentIndex++;
+	if(currentIndex < wordLength - 1)
+	{
+		currentIndex = 0;
+	}
  }
  FString ASeaString::GetFWord()
  {
 	return fWord;
  }
+
+int32 ASeaString::GetCurrentInd() const
+{
+	return currentIndex;
+}

@@ -4,6 +4,7 @@
 
 #include "CurseSymbol.h"
 #include <random>
+#include <algorithm>
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "SeaString.generated.h"
@@ -29,6 +30,9 @@ public:
 	// User Functions and Variables
 	void PrintCString( char* p);
 	FString fWord;
+
+	// ************************** Unreal Functions *********************************************//
+
 	//Once correct symbol has has been selected move and select the next symbol in CString
 	UFUNCTION(BlueprintCallable)
 	void MoveSelectedSymbol();
@@ -41,12 +45,16 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	FString GetFWord();
+
+	UFUNCTION(BlueprintCallable)
+	int32 GetCurrentInd() const;
 	 
 private:
 	char symbols[6] = {'!', '#', '&', '/','$','?'};
 	static constexpr int wordLength= 5;
 	char word[wordLength] = {1,1,1,1,0};
 	char* selectedSymbol;
+	int32 currentIndex = 0;
 	std::random_device rd;
 	std::mt19937 rng;
 	std::uniform_int_distribution<int> indexPicker;
