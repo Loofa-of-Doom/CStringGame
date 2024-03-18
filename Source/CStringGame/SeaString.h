@@ -53,7 +53,8 @@ private:
 	char symbols[6] = {'!', '#', '&', '/','$','?'};
 	static constexpr int wordLength= 5;
 	static constexpr int spaces = wordLength - 1;
-	char word[wordLength + spaces] = {1,1,1,1,1,1,1,1,0};
+	static constexpr int totalCharLength = wordLength + spaces;
+	char word[totalCharLength] = {1,1,1,1,1,1,1,1,0};
 	char* selectedSymbol;
 	int32 currentIndex = 0;
 	std::random_device rd;

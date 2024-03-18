@@ -13,7 +13,7 @@ ASeaString::ASeaString()
 	PrimaryActorTick.bCanEverTick = true;
 
 	//Last char of string neds to be 0 so C-String ends
-	word[wordLength + spaces] = 0;
+	word[totalCharLength] = 0;
 	for(char* p = word; *p != 0; p++)
 	{
 		char* spacer = p++;
@@ -71,11 +71,19 @@ void ASeaString::PrintSelectedSymbol()
 
 void ASeaString::MoveSelectedSymbol()
  {
-	selectedSymbol++;
-	currentIndex++;
-	if(currentIndex < wordLength - 1)
+	if(*selectedSymbol == ' ')
 	{
-		currentIndex = 0;
+		selectedSymbol+=2;
+		currentIndex+=2;
+		if(currentIndex < totalCharLength - 1)
+		{
+			currentIndex = 0;
+		}
+	}
+	else
+	{
+		selectedSymbol++;
+		currentIndex++;
 	}
  }
  FString ASeaString::GetFWord()
