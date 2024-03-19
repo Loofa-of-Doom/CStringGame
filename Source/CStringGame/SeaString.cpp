@@ -16,17 +16,12 @@ ASeaString::ASeaString()
 	word[totalCharLength] = 0;
 	for(char* p = word; *p != 0; p++)
 	{
-		char* spacer = p++;
 		char newSymbol = symbols[indexPicker(rng)];
-		*spacer = ' ';
-		if(*p != ' ')
-		{
-			*p= newSymbol;
-		}
-		
-		
+		*p = newSymbol;
 	}
+	Spacer(word);
 	selectedSymbol = word;
+
 	//sets FSTring
 	fWord = word;
 	PrintSelectedSymbol();
@@ -55,12 +50,12 @@ void ASeaString::PrintCString(char* p)
 	for(; *p != 0; p++)
 	{
 		//UE_LOG(LogTemp, Display, TEXT("Heres the string: %s"), *msg);
-		UE_LOG(LogTemp, Display, TEXT("Heres the string: %c"), *p);
+		//UE_LOG(LogTemp, Display, TEXT("Heres the string: %c"), *p);
 	} 
 }
 void ASeaString::PrintSelectedSymbol()
 {
-	UE_LOG(LogTemp, Display, TEXT("The selected symbol is: %c"), *selectedSymbol);
+	UE_LOG(LogTemp, Display, TEXT("The String is:%s"),*fWord);
 }
 
  int32 ASeaString::GetSelectedSymbol() const
@@ -71,20 +66,17 @@ void ASeaString::PrintSelectedSymbol()
 
 void ASeaString::MoveSelectedSymbol()
  {
+	selectedSymbol++;
+	currentIndex++;
 	if(*selectedSymbol == ' ')
-	{
-		selectedSymbol+=2;
-		currentIndex+=2;
-		if(currentIndex < totalCharLength - 1)
-		{
-			currentIndex = 0;
-		}
-	}
-	else
 	{
 		selectedSymbol++;
 		currentIndex++;
 	}
+	if(currentIndex < totalCharLength)
+		{
+			currentIndex = 0;
+		}
  }
  FString ASeaString::GetFWord()
  {
@@ -94,4 +86,13 @@ void ASeaString::MoveSelectedSymbol()
 int32 ASeaString::GetCurrentInd() const
 {
 	return currentIndex;
+}
+void ASeaString::Spacer(char* p)
+{
+	p++;
+	for(int i = 0; i < spaces; i++)
+	{
+		*p = ' ';
+		p += 2;
+	}
 }

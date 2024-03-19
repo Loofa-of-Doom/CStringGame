@@ -60,4 +60,7 @@ private:
 	std::random_device rd;
 	std::mt19937 rng;
 	std::uniform_int_distribution<int> indexPicker;
+
+	// ******************* Private Functions *****************************//
+	void Spacer(char* p);
 };
