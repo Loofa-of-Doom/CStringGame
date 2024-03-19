@@ -73,7 +73,7 @@ void ASeaString::MoveSelectedSymbol()
 		selectedSymbol++;
 		currentIndex++;
 	}
-	if(currentIndex < totalCharLength)
+	if(currentIndex > totalCharLength)
 		{
 			currentIndex = 0;
 		}
