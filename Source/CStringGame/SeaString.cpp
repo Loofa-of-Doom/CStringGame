@@ -55,7 +55,8 @@ void ASeaString::PrintCString(char* p)
 }
 void ASeaString::PrintSelectedSymbol()
 {
-	UE_LOG(LogTemp, Display, TEXT("The String is:%s"),*fWord);
+	//also use as a test print for other variable and values
+	UE_LOG(LogTemp, Display, TEXT("The current index is: %i"),currentIndex);
 }
 
  int32 ASeaString::GetSelectedSymbol() const
@@ -73,7 +74,7 @@ void ASeaString::MoveSelectedSymbol()
 		selectedSymbol++;
 		currentIndex++;
 	}
-	if(currentIndex > totalCharLength)
+	if(currentIndex >= totalCharLength -1)
 		{
 			currentIndex = 0;
 		}
