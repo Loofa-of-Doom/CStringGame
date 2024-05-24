@@ -55,7 +55,7 @@ private:
 	static constexpr int spaces = wordLength - 1;
 	static constexpr int totalCharLength = wordLength + spaces;
 	char word[totalCharLength] = {1,1,1,1,1,1,1,1,0};
-	char* selectedSymbol;
+	char* selectedSymbol; 
 	int32 currentIndex = 0;
 	std::random_device rd;
 	std::mt19937 rng;
